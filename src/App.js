@@ -1,3 +1,5 @@
+import 'react-app-polyfill/ie11'
+import 'react-app-polyfill/stable'
 import React from 'react'
 import { Client as Styletron } from 'styletron-engine-atomic'
 import { Provider as StyletronProvider } from 'styletron-react'
