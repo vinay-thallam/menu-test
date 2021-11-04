@@ -3,7 +3,6 @@ import { Client as Styletron } from 'styletron-engine-atomic'
 import { Provider as StyletronProvider } from 'styletron-react'
 import { LightTheme, BaseProvider, styled } from 'baseui'
 import { StatefulMenu } from 'baseui/menu'
-import logo from './logo.svg'
 import './App.css'
 
 const engine = new Styletron()
@@ -18,6 +17,7 @@ function itemClick(item) {
   console.log('item :', item.item)
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function App() {
   return (
     <StyletronProvider value={engine}>
