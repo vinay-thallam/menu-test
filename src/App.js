@@ -4,7 +4,8 @@ import React from 'react'
 import { Client as Styletron } from 'styletron-engine-atomic'
 import { Provider as StyletronProvider } from 'styletron-react'
 import { LightTheme, BaseProvider, styled } from 'baseui'
-import { StatefulMenu } from 'baseui/menu'
+// import { StatefulMenu } from 'baseui/menu'
+import { Button } from 'baseui/button'
 import './App.css'
 
 const engine = new Styletron()
@@ -15,9 +16,9 @@ const Centered = styled('div', {
   height: '100%',
 })
 
-function itemClick(item) {
-  console.log('item :', item.item)
-}
+// function itemClick(item) {
+//   console.log('item :', item.item)
+// }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function App() {
@@ -25,7 +26,8 @@ function App() {
     <StyletronProvider value={engine}>
       <BaseProvider theme={LightTheme}>
         <Centered>
-          <StatefulMenu
+          <Button>Test Button</Button>
+          {/* <StatefulMenu
             items={[
               { label: 'Item One' },
               { label: 'Item Two' },
@@ -33,7 +35,7 @@ function App() {
               { label: 'Item Four' },
             ]}
             onItemSelect={itemClick}
-          />
+          /> */}
         </Centered>
       </BaseProvider>
     </StyletronProvider>
